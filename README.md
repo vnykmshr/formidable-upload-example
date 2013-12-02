@@ -13,12 +13,12 @@ Express does come with its own scaffolding tool (`bin/express`) to get you start
 
 ### Getting started
 
-# Get headstart `git clone git@github.com:vnykmshr/headstart.git`
-# Install Packages `cd headstart && npm install`
-# Copy config `cp sample-config.js config.js`
-# Minify assets `./bin/minify`
-# Test start server `node app`
-# Update remote upstream to your own repository, and do a initial commit.
-# Hack it as you please.
+* Get headstart `git clone git@github.com:vnykmshr/headstart.git`
+* Install Packages `cd headstart && npm install`
+* Copy config `cp sample-config.js config.js`
+* Minify assets `./bin/minify`
+* Test start server `node app`
+* Update remote upstream to your own repository, and do a initial commit.
+* Start hacking the code to suit your taste.
 
 If you face any issues, just drop me a message. I will be more than happy to help you out.
