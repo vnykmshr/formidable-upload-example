@@ -1,0 +1,20 @@
+{
+  "name": "application-name",
+  "description": "The git repository for the \"-\" web application",
+  "version": "0.0.1",
+  "homepage": "",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3",
+    "jade": "*",
+    "smush": "0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Vinayak Mishra <viks@vnykmshr.com>"
+}
