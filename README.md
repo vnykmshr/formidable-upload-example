@@ -1,9 +1,7 @@
 Express Headstart
 =================
 
-### Express Headstart
-
-Start your next Express web app in minutes.
+### Start your next Express web app in minutes.
 
 Express does come with its own scaffolding tool (`bin/express`) to get you started. I have customized the initial scaffold to suit my taste;
 
