@@ -2,6 +2,7 @@ var util = require('util');
 var http = require('http');
 var path = require('path');
 var express = require('express');
+var proc = require('./bin/proc');
 
 var config = require('./config');
 
@@ -35,3 +36,6 @@ http.createServer(app)
   .listen(app.get('port'), function () {
     util.log("Web server listening on port " + app.get('port') + ' in ' + app.get('env'));
   });
+
+// initialize process management
+proc.init(app);

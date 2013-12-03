@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+#
+
+ENV=$1
+
+abort() {
+  echo
+  echo "  $@" 1>&2
+  echo
+  exit 1
+}
+
+log() {
+  echo "  ○ $@"
+}
+
+#create symlink for logs
+if test -e logs ; then
+  log 'logs dir is present'
+else
+  ln -sf ../shared/logs
+fi
+
+log "creating release file"
+echo "module.exports = '$(git describe)'" > release
+
+echo "Running npm install in $PWD"
+npm install
+rc=$?
+if [[ $rc != 0 ]] ; then
+    abort 'NPM install failed ' $rc
+fi
+
+# log "minifying assets"
+# bin/minify || abort 'Minification failed. Aborted Restart, but npm packages have been updated.'
+
+log 'Post deploy script has been executed successfully.'
+
+if test -e '/etc/init/myapp.conf' ; then
+  log 'upstart config is okay'
+else
+  log '**** Upstart configuration is missing ****'
+  exit 1
+fi
+
+# Display nginx maintainence page
+# log 'Starting maintainence window'
+# cp public/system/.maintenance.html public/system/maintenance.html
+
+#log 'Touching restart file'
+touch public/system/restart
+# wait for a max of 1 minute - this is the time to restart
+sleep 5
+
+# remove the file if it still exists
+# rm -f public/system/maintenance.html
+log 'Deployment complete'

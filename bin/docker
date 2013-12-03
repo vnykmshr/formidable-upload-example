@@ -1,0 +1,2 @@
+#!/bin/sh
+docker -s yes -I -u -x node_modules,resources,bin,views,public,deploy,doc,config,sample-config.js,config.js

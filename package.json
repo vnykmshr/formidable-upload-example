@@ -10,7 +10,9 @@
   "dependencies": {
     "express": "3",
     "jade": "*",
-    "smush": "0"
+    "smush": "0",
+    "optimist": "0",
+    "recluster": "0"
   },
   "repository": {
     "type": "git",
