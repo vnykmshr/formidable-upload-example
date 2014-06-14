@@ -6,37 +6,37 @@ var util = require('util');
 var smush = require('smush');
 
 function headerCss(cb) {
-  smush.css({
-    template: 'views/layout/headercss'
-  }, cb);
+    smush.css({
+        template: 'views/layout/headercss'
+    }, cb);
 }
 
 function headerJs(cb) {
-  smush.js({
-    template: 'views/layout/headerjs'
-  }, cb);
+    smush.js({
+        template: 'views/layout/headerjs'
+    }, cb);
 }
 
 function footerJs(cb) {
-  smush.js({
-    template: 'views/layout/footerjs'
-  }, cb);
+    smush.js({
+        template: 'views/layout/footerjs'
+    }, cb);
 }
 
 function init(cb) {
-  var actions = [headerCss, headerJs, footerJs];
-  var count = actions.length;
-  var check = function (err, result) {
-    util.log(util.inspect(err || result));
+    var actions = [headerCss, headerJs, footerJs];
+    var count = actions.length;
+    var check = function (err, result) {
+        util.log(util.inspect(err || result));
 
-    if (--count === 0) {
-      cb('done');
-    }
-  };
+        if (--count === 0) {
+            cb('done');
+        }
+    };
 
-  actions.forEach(function (action) {
-    action(check);
-  });
+    actions.forEach(function (action) {
+        action(check);
+    });
 }
 
 init(util.log);

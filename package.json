@@ -1,8 +1,8 @@
 {
   "name": "application-name",
-  "description": "The git repository for the \"-\" web application",
-  "version": "0.0.1",
-  "homepage": "",
+  "description": "The git repository for the \"myapp\" web application",
+  "version": "0.0.2",
+  "homepage": "https://github.com/vnykmshr/headstart",
   "private": true,
   "scripts": {
     "start": "node app"
@@ -12,11 +12,12 @@
     "jade": "*",
     "smush": "0",
     "optimist": "0",
-    "recluster": "0"
+    "recluster": "0",
+    "proc-utils": "0.0.2"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:vnykmshr/headstart.git"
   },
   "author": "Vinayak Mishra <viks@vnykmshr.com>"
 }
