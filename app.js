@@ -2,6 +2,7 @@ var util = require('util');
 var http = require('http');
 var path = require('path');
 var express = require('express');
+var methodOverride = require('method-override');
 var proc = require('proc-utils');
 
 var config = require('./config');
@@ -17,7 +18,7 @@ app.use(express.logger('dev'));
 app.use(express.compress());
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(express.methodOverride());
+app.use(methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 

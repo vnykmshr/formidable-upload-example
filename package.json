@@ -13,7 +13,8 @@
     "smush": "0",
     "optimist": "0",
     "recluster": "0",
-    "proc-utils": "0.0.2"
+    "proc-utils": "0.0.2",
+    "method-override": "~2.0.2"
   },
   "repository": {
     "type": "git",
