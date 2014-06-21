@@ -1,11 +1,10 @@
 extends layout
 
 block content
-  h3 Express Headstart
+  h1 Formidable Upload Example
 
-  .ul
-    li Express
-    li jQuery 1.10.2
-    li Skeleton CSS 1.2
-    li Navigataur CSS
-    li Smush
+  p Please select a file to upload
+
+  form#fileUploadForm(accept-charset="utf-8", method="post", action="/upload", enctype="multipart/form-data")
+    input(type="file", name="imagefile", multiple="multiple")
+    button.upload-btn(type="submit") Upload

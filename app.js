@@ -3,14 +3,11 @@ var http = require('http');
 var path = require('path');
 var express = require('express');
 var methodOverride = require('method-override');
-var proc = require('proc-utils');
-
-var config = require('./config');
 
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || config.port || 3000);
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 require('./lib/view')(app);
 app.use(express.favicon());
@@ -38,6 +35,3 @@ http.createServer(app)
         util.log("Web server listening on port " + app.get('port') + ' in ' +
             app.get('env'));
     });
-
-// initialize process management
-proc.init(app);

@@ -34,10 +34,4 @@ npm-debug.log
 node_modules
 release
 
-config.js
-public/js/min
-public/css/min
-views/layout/headercss.jade
-views/layout/headerjs.jade
-views/layout/footerjs.jade
-deploy/deploy.conf
+public/data

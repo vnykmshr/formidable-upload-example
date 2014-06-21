@@ -9,19 +9,24 @@ doctype html
 html(class="no-js", lang="en")
   // <![endif]
   head
-    include layout/header
-    include layout/headercss
-    include layout/headerjs
+    meta(charset="utf-8")
+    title= title
+    meta(name="description", content="Example app for formidable upload")
+    meta(name="author", content="Vinayak Mishra")
+
+    meta(name="viewport", contents="width=device-width, initial-scale=1, maximum-scale=1")
+
+    //if lt IE 9
+      script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
+
+    link(rel="shortcut icon", href="/images/favicon.ico")
+    link(rel="stylesheet", href="/css/style.css")
 
   body
-    .super-container.full-width
-      .container
-        include layout/navigation
-
-      .container
+    .container
+      .content
         block content
 
-      .container
-        include layout/footer
-
-        include layout/footerjs
+    .container
+      script(src="/js/scripts.js")
+      footer &copy; 2014 Formidable Express Upload | Vinayak Mishra

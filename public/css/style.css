@@ -1,0 +1,33 @@
+ * {
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   outline: none;
+   padding: 0;
+ }
+ html, html a {
+   -webkit-font-smoothing: antialiased !important;
+   -moz-font-smoothing: antialiased !important;
+   -webkit-text-size-adjust: none;
+ }
+ body {
+   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ }
+
+.container {
+    width: 66%;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 50px 10px;
+    min-height: 300px;
+}
+
+footer {
+    border-top: 1px solid gray;
+    padding: 20px 0;
+}
+
+.upload-btn {
+    width: 100px;
+    padding: 5px 10px;
+}
