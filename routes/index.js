@@ -14,7 +14,7 @@ var uploader = upload()
             width: 800,
             quality: 80
         }
-    });
+    })
     .imguri();
 
 module.exports = function (app) {
