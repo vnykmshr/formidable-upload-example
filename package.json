@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "express": "3",
+    "formidable-upload": "0.0.3",
     "jade": "*",
-    "smush": "0",
+    "magickwand": "0.0.10",
+    "method-override": "~2.0.2",
     "optimist": "0",
     "recluster": "0",
-    "method-override": "~2.0.2"
+    "smush": "0"
   },
   "repository": {
     "type": "git",
