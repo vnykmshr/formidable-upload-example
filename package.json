@@ -3,7 +3,6 @@
   "description": "The git repository for the \"myapp\" web application",
   "version": "0.0.2",
   "homepage": "https://github.com/vnykmshr/headstart",
-  "private": true,
   "scripts": {
     "start": "node app"
   },
@@ -11,7 +10,6 @@
     "express": "3",
     "formidable-upload": "0.0.3",
     "jade": "*",
-    "magickwand": "0.0.10",
     "method-override": "~2.0.2",
     "optimist": "0",
     "recluster": "0",

@@ -8,13 +8,14 @@ var upload = require('formidable-upload');
 var uploader = upload()
     .accept(/image*/)
     .to(['public', 'data', 'images'], '9876543210')
-    .resize({
+    //XXX: to use resize, install `magickwand` and uncomment this
+    /*.resize({
         use: 'resize',
         settings: {
             width: 800,
             quality: 80
         }
-    })
+    })*/
     .imguri();
 
 module.exports = function (app) {
