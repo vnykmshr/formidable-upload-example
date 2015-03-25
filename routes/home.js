@@ -2,8 +2,6 @@
  * Home controller
  */
 
-var util = require('util');
-
 var home = {
     index: function index(req, res, next) {
         res.locals.title = 'Home';
